@@ -14,7 +14,7 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/foros' element={<Foros/>}></Route>
-        <Route path='/objetoforo/:id' element={<ObjetoForo/>}></Route>
+        <Route path='/objetoforo' element={<ObjetoForo/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

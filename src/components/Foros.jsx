@@ -42,18 +42,77 @@ const Foros = () => {
                             </button>
 
                         </li>
-                        <li className={`listCollapse ${foroNav ? 'listCollapse--show' : ''} list-group-item list-group-item-secondary justify-content-between align-items-center py-3`}>
-                            Todos
-                        </li>
-                        <li className={`listCollapse ${foroNav ? 'listCollapse--show' : ''} list-group-item list-group-item-secondary justify-content-between align-items-center py-3`}>
-                            Todos
-                        </li>
-                        <li className={`listCollapse ${foroNav ? 'listCollapse--show' : ''} list-group-item list-group-item-secondary justify-content-between align-items-center py-3`}>
-                            Todos
-                        </li>
-                        <li className={`listCollapse ${foroNav ? 'listCollapse--show' : ''} list-group-item list-group-item-secondary justify-content-between align-items-center py-3`}>
-                            Todos
-                        </li>
+                        <ul className={`p-0 ${foroNav ? 'listCollapse--show' : 'listCollapse'}`}>
+                            <li className={` list-group-item list-group-item-secondary justify-content-between align-items-center py-3`}>
+                                Todos
+                            </li>
+                            <li className={` list-group-item list-group-item-secondary justify-content-between align-items-center py-3`}>
+                                Destacados
+                            </li>
+                            <li className={`d-flex list-group-item list-group-item-secondary justify-content-between align-items-center py-3`} onClick={() => {setRecientes(!recientes)}}>
+                                Recientes
+                                <span className="badge bg-primary rounded-pill">
+                                    <FontAwesomeIcon icon={ recientes ? faAngleDown : faAngleRight }/>
+                                </span>
+                            </li>
+                            {
+                                recientes ?(
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+
+                                    </ul>
+
+                                ):(
+                                    <span className='d-none'></span>
+                                )
+                            }
+                            <li className={` list-group-item list-group-item-secondary justify-content-between align-items-center py-3`}>
+                                Nuevos
+                            </li>
+                            <li className="d-flex list-group-item list-group-item-secondary justify-content-between align-items-center py-3" onClick={(e) => {setFavoritos(!favoritos)}}>
+                                Favoritos
+                                <span className="badge bg-primary rounded-pill">
+                                    <FontAwesomeIcon icon={ favoritos ? faAngleDown : faAngleRight }/>
+                                </span>
+                            </li>
+                            {
+                                favoritos ?(
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+
+                                    </ul>
+
+                                ):(
+                                    <span className='d-none'></span>
+                                )
+                            }
+                            <li className="d-flex list-group-item list-group-item-secondary justify-content-between align-items-center py-3" onClick={(e) => {setCreados(!creados)}}>
+                                Creados
+                                <span className="badge bg-primary rounded-pill">
+                                    <FontAwesomeIcon icon={ creados ? faAngleDown : faAngleRight }/>
+                                </span>
+                            </li>
+                            {
+                                creados ?(
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+                                        <li className="list-group-item list-group-item-dark">An item</li>
+
+                                    </ul>
+
+                                ):(
+                                    <span className='d-none'></span>
+                                )
+                            }
+                        </ul>
                     </ul>
                     <div className="col-lg-4 col-11 forosSidebarContainer">
                         <div className="position-sticky forosSidebar">

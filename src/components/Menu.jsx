@@ -19,7 +19,7 @@ const Menu = () => {
 
     return (  
         <header id='header'> 
-            <nav className="navbar navbar-expand-lg fixed-top menu">
+            <nav className="navbar navbar-expand-lg bg-light fixed-top menu">
                 <div className="container-lg">
                     {
                         user ? (
@@ -85,9 +85,9 @@ const Menu = () => {
                                         manudiiez
                                     </a>
                                     <ul className={`dropdown-menu ${dropdown ? 'show' : ''}`} aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="#">Perfil</a></li>
+                                        <li><a className="dropdown-item" href="#!">Perfil</a></li>
                                         <li><hr className="dropdown-divider"/></li>
-                                        <li><a className="dropdown-item" href="#" onClick={(e) => setUser(!user)}>Cerrar sesion</a></li>
+                                        <li><a className="dropdown-item" href="#!" onClick={(e) => setUser(!user)}>Cerrar sesion</a></li>
                                     </ul>
 
                                 </span>
